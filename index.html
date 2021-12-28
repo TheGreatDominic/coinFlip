@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title>Coin Flip</title>
+</head>
+
+<body>
+	<h1>Coin Flip!</h1>
+	<h2>You can use this to help you choose between two things!</h2>
+	<div id="flipBox">
+		<img src="images/both.jpg" alt="Picture of both sides of a coin" id="bothPic">
+		<img src="images/heads.jpg" alt="Picture of heads side of a coin" id="headsPic">
+		<img src="images/tails.jpg" alt="Picture of tails side of a coin" id="tailsPic">
+		<p id="flipResult"></p>
+	</div>
+	<button id="flip" onclick="flipFunc()";>Click to Flip!</button>
+	<button id="reset" onclick="resetFunc()";>Click here to reset!</button>
+	<div id="counterSection">
+		<p id="headsScore">Number of Heads: 0</p>
+		<p id="tailsScore">Number of Tails: 0</p>
+	</div>
+
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>

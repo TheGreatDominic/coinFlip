@@ -1,0 +1,60 @@
+body {
+    text-align: center;
+}
+
+#flipBox{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    max-height: 450px;
+}
+
+#bothPic, #headsPic, #tailsPic {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#bothPic{
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+    display: block;
+    margin-top: 100px;
+    margin-bottom: 100px; 
+}
+
+#headsPic{
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: none;
+}
+
+#tailsPic{
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: none;
+}
+
+#flip{
+    margin: auto;
+}
+
+#reset{
+    display: none;
+    margin: auto;
+}
+
+#counterSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+#headsScore, #tailsScore{
+    font-size: 30px;
+}
