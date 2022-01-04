@@ -1,5 +1,6 @@
 var bothPic, headsPic, tailsPic, flip, reset, x, flipResult;
-var headsScore, tailsScore, headsCounter, tailsCounter;
+var headsScore, tailsScore, headsCounter, tailsCounter, audio;
+var totalCounter, totalFlips;
 
 bothPic = document.getElementById("bothPic");
 headsPic = document.getElementById("headsPic");
@@ -12,11 +13,21 @@ headsScore = document.getElementById("headsScore");
 tailsScore = document.getElementById("tailsScore");
 headsCounter = 0;
 tailsCounter = 0;
+audio = new Audio("sounds/coinflip.mp3");
+totalCounter = 0;
+totalFlips = document.getElementById("totalFlips");
 
 
 
 function flipFunc()
 {
+
+    totalCounter++;
+
+    totalFlips.innerHTML = "Total Flips: " + totalCounter;
+
+    audio.play();
+
     x = Math.floor(Math.random() * 100);
 
     if(x <= 49)
@@ -28,7 +39,7 @@ function flipFunc()
         reset.style.display = "block";
         flipResult.innerHTML = "It's Heads!";
         headsCounter++;
-        headsScore.innerHTML = "Number of Heads: " + headsCounter;
+        headsScore.innerHTML = "Number of Heads: " + headsCounter;  
     }//end heads flip
     else
     {//start tails flip
@@ -39,8 +50,11 @@ function flipFunc()
         reset.style.display = "block";
         flipResult.innerHTML = "It's Tails!"
         tailsCounter++;
-        tailsScore.innerHTML = "Number of Tails: " + tailsCounter;
+        tailsScore.innerHTML = "Number of Tails: " + tailsCounter;  
     }//end tails flip
+
+    headsPercent.innerHTML = "Percent Heads: " + ((headsCounter/totalCounter) * 100).toFixed(0) + "%";
+    tailsPercent.innerHTML = "Percent Tails: " + ((tailsCounter/totalCounter) * 100).toFixed(0) + "%";
 };
 
 function resetFunc()

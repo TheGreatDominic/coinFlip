@@ -1,9 +1,9 @@
 body {
     text-align: center;
+    margin: 20px;
 }
 
 #flipBox{
-    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     max-height: 450px;
@@ -19,16 +19,13 @@ body {
     max-height: 600px;
     margin: auto;
     display: block;
-    margin-top: 100px;
-    margin-bottom: 100px; 
+    margin-bottom: 50px;
 }
 
 #headsPic{
     max-width: 300px;
     max-height: 300px;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
     display: none;
 }
 
@@ -36,18 +33,34 @@ body {
     max-width: 300px;
     max-height: 300px;
     margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
     display: none;
+}
+
+#flipResult{
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 16px;
 }
 
 #flip{
     margin: auto;
+    font-size: 30px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-color: black;
 }
 
 #reset{
     display: none;
     margin: auto;
+    font-size: 30px;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-color: black;
 }
 
 #counterSection{
@@ -55,6 +68,25 @@ body {
     justify-content: space-between;
 }
 
-#headsScore, #tailsScore{
+#headsScore, #tailsScore, #headsPercent, #tailsPercent, #totalFlips{
     font-size: 30px;
+}
+
+#percentageSection{
+    display: grid;
+}
+
+#headsPercent{
+    text-align: start;
+    grid-row: 1;  
+}
+
+#totalFlips{
+    text-align: center;
+    grid-row: 1;
+}
+
+#tailsPercent{
+    text-align: end;
+    grid-row: 1;
 }
